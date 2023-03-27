@@ -1,5 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.museum_free_bcn">
+    <uses-permission android:name="android.permission.INTERNET"/>
    <application
         android:label="museum_free_bcn"
         android:name="${applicationName}"
