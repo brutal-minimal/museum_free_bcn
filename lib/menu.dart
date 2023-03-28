@@ -9,7 +9,15 @@ import 'package:flutter/material.dart';
     "saturday/dissabte/subota/sabado",
     "sunday/diumenge/nedilya/domingo",
     ];
-
+  const rainbow = [
+    Color.fromARGB(250, 250, 148, 148),
+    Color.fromARGB(250, 250, 203, 148),
+    Color.fromARGB(250, 250, 233, 148),
+    Color.fromARGB(250, 199, 250, 148),
+    Color.fromARGB(250, 148, 250, 244),
+    Color.fromARGB(250, 148, 207, 250),
+    Color.fromARGB(250, 156, 148, 250),
+  ];
 
     
 class WeekMenu extends StatelessWidget {
@@ -37,7 +45,7 @@ class WeekMenu extends StatelessWidget {
                   boxShadow: [
                     BoxShadow(
                       blurStyle: BlurStyle.normal,
-                      color: const Color.fromARGB(250, 250, 148, 148).withOpacity(0.9),
+                      color: rainbow[0].withOpacity(0.9),
                       spreadRadius: 5,
                       blurRadius: 5,
                       //offset: const Offset(0, 3),
@@ -49,7 +57,7 @@ class WeekMenu extends StatelessWidget {
                 child: ElevatedButton(
                       style: ButtonStyle(
                         elevation: MaterialStateProperty.all(0),
-                        backgroundColor: MaterialStateProperty.all(const Color.fromARGB(250, 250, 148, 148)),
+                        backgroundColor: MaterialStateProperty.all(rainbow[0]),
                        ),
                       onPressed: (){Navigator.pushNamed(context,"/monday");},
                       child: SizedBox(
@@ -64,7 +72,7 @@ class WeekMenu extends StatelessWidget {
                 width: double.infinity,
                 child: ElevatedButton(
                       style: ButtonStyle(
-                        backgroundColor: MaterialStateProperty.all(const Color.fromARGB(250, 250, 203, 148)),
+                        backgroundColor: MaterialStateProperty.all(rainbow[1]),
                        ),
                       onPressed: (){Navigator.pushNamed(context,"/tuesday");},
                       child: Text(weekdays[1], style: textStyle)
@@ -77,7 +85,7 @@ class WeekMenu extends StatelessWidget {
                 width: double.infinity,
                 child: ElevatedButton(
                       style: ButtonStyle(
-                        backgroundColor: MaterialStateProperty.all(const Color.fromARGB(250, 250, 233, 148)),
+                        backgroundColor: MaterialStateProperty.all(rainbow[2]),
                ),
               onPressed: (){Navigator.pushNamed(context,"/wednesday");},
               child: Text(weekdays[2], style: textStyle, textAlign: TextAlign.left,)
@@ -91,7 +99,7 @@ class WeekMenu extends StatelessWidget {
                 child: ElevatedButton(
                       style: ButtonStyle(
                         //padding: MaterialStateProperty.all(5),
-                        backgroundColor: MaterialStateProperty.all(const Color.fromARGB(250, 199, 250, 148)),
+                        backgroundColor: MaterialStateProperty.all(rainbow[3]),
                ),
               onPressed: (){Navigator.pushNamed(context,"/thursday");},
               child: Text(weekdays[3], style: textStyle)
@@ -105,7 +113,7 @@ class WeekMenu extends StatelessWidget {
                 child: ElevatedButton(
                       style: ButtonStyle(
                         //padding: MaterialStateProperty.all(5),
-                        backgroundColor: MaterialStateProperty.all(const Color.fromARGB(250, 148, 250, 244)),
+                        backgroundColor: MaterialStateProperty.all(rainbow[4]),
                ),
               onPressed: (){Navigator.pushNamed(context,"/friday");},
               child: Text(weekdays[4], style: textStyle)
@@ -119,7 +127,7 @@ class WeekMenu extends StatelessWidget {
                 child: ElevatedButton(
                       style: ButtonStyle(
                         //padding: MaterialStateProperty.all(5),
-                        backgroundColor: MaterialStateProperty.all(const Color.fromARGB(250, 148, 207, 250)),
+                        backgroundColor: MaterialStateProperty.all(rainbow[5]),
                        ),
                       onPressed: (){Navigator.pushNamed(context,"/saturday");},
                       child: Text(weekdays[5], style: textStyle, textAlign: TextAlign.left)
@@ -133,7 +141,7 @@ class WeekMenu extends StatelessWidget {
                 child: ElevatedButton(
                       style: ButtonStyle(
                         //padding: MaterialStateProperty.all(5),
-                        backgroundColor: MaterialStateProperty.all(const Color.fromARGB(250, 156, 148, 250)),
+                        backgroundColor: MaterialStateProperty.all(rainbow[6]),
                        ),
                       onPressed: (){Navigator.pushNamed(context,"/sunday");},
                       child: SizedBox(
