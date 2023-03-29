@@ -19,20 +19,21 @@ import 'package:flutter/material.dart';
     Color.fromARGB(250, 156, 148, 250),
   ];
 
-    
+   const mytextStyle = TextStyle(
+                            color: Colors.black, 
+                            fontSize: 24, 
+                            letterSpacing: 2,
+                            fontFamily: "font_inter",
+                            fontWeight: FontWeight.w500,
+                            overflow: TextOverflow.fade ); 
+                            
 class WeekMenu extends StatelessWidget {
 
   const WeekMenu({super.key});
 
   @override
   Widget build(BuildContext context) {
-    const textStyle = TextStyle(
-                            color: Colors.black, 
-                            fontSize: 24, 
-                            letterSpacing: 2,
-                            fontFamily: "font_inter",
-                            fontWeight: FontWeight.w500,
-                            overflow: TextOverflow.fade );
+    
     return Scaffold(
       body: SafeArea(
         child: Column(
@@ -62,7 +63,7 @@ class WeekMenu extends StatelessWidget {
                       onPressed: (){Navigator.pushNamed(context,"/monday");},
                       child: SizedBox(
                         width: double.maxFinite,
-                        child: Text(weekdays[0], style: textStyle, textAlign: TextAlign.left,))
+                        child: Text(weekdays[0], style: mytextStyle, textAlign: TextAlign.left,))
                         ),
               ),
             ),
@@ -75,7 +76,7 @@ class WeekMenu extends StatelessWidget {
                         backgroundColor: MaterialStateProperty.all(rainbow[1]),
                        ),
                       onPressed: (){Navigator.pushNamed(context,"/tuesday");},
-                      child: Text(weekdays[1], style: textStyle)
+                      child: Text(weekdays[1], style: mytextStyle)
                         ),
               ),
             ),
@@ -88,7 +89,7 @@ class WeekMenu extends StatelessWidget {
                         backgroundColor: MaterialStateProperty.all(rainbow[2]),
                ),
               onPressed: (){Navigator.pushNamed(context,"/wednesday");},
-              child: Text(weekdays[2], style: textStyle, textAlign: TextAlign.left,)
+              child: Text(weekdays[2], style: mytextStyle, textAlign: TextAlign.left,)
                         ),
               ),
             ),
@@ -102,7 +103,7 @@ class WeekMenu extends StatelessWidget {
                         backgroundColor: MaterialStateProperty.all(rainbow[3]),
                ),
               onPressed: (){Navigator.pushNamed(context,"/thursday");},
-              child: Text(weekdays[3], style: textStyle)
+              child: Text(weekdays[3], style: mytextStyle)
                         ),
               ),
             ),
@@ -116,7 +117,7 @@ class WeekMenu extends StatelessWidget {
                         backgroundColor: MaterialStateProperty.all(rainbow[4]),
                ),
               onPressed: (){Navigator.pushNamed(context,"/friday");},
-              child: Text(weekdays[4], style: textStyle)
+              child: Text(weekdays[4], style: mytextStyle)
                         ),
               ),
             ),
@@ -130,7 +131,7 @@ class WeekMenu extends StatelessWidget {
                         backgroundColor: MaterialStateProperty.all(rainbow[5]),
                        ),
                       onPressed: (){Navigator.pushNamed(context,"/saturday");},
-                      child: Text(weekdays[5], style: textStyle, textAlign: TextAlign.left)
+                      child: Text(weekdays[5], style: mytextStyle, textAlign: TextAlign.left)
                         ),
               ),
             ),
@@ -146,7 +147,7 @@ class WeekMenu extends StatelessWidget {
                       onPressed: (){Navigator.pushNamed(context,"/sunday");},
                       child: SizedBox(
                         width: double.maxFinite,
-                        child: Text(weekdays[6], style: textStyle, textAlign: TextAlign.left))
+                        child: Text(weekdays[6], style: mytextStyle, textAlign: TextAlign.left))
                         ),
               ),
             ),

@@ -23,6 +23,7 @@ class _TuesdayState extends State<Tuesday> {
           ],
         ),),
       appBar: AppBar(
+        backgroundColor: rainbow[1],
         title:  Text(weekdays[1]),
       ),);
   }
